@@ -730,7 +730,7 @@ void menu_select_launch::custom_render(void *selectedref, float top, float botto
 		isstar = mame_machine_manager::instance()->favorite().is_favorite_system(driver);
 
 		// first line is year, manufacturer
-		tempbuf[0] = string_format(_("%1$s, %2$s"), driver.year, driver.manufacturer);
+		tempbuf[0] = string_format(_("%1$s (%2$s), %3$s"), driver.name, driver.year, driver.manufacturer);
 
 		// next line is clone/parent status
 		int cloneof = driver_list::non_bios_clone(driver);
